@@ -6,7 +6,15 @@
              mc:Ignorable="d"
              x:Class="HelloWorld.GreetPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label  Text="Hello World" x:Name="label" />
-        <Slider ValueChanged="Slider_ValueChanged" x:Name="slider" />
+        <Label  Text="{Binding 
+            Source={x:Reference slider}, 
+            Path=Value, 
+            StringFormat='Value is {0:F2}'}" 
+                
+            Opacity="{Binding 
+            Source={x:Reference slider}, 
+            Path=Value}"
+                x:Name="label" />
+        <Slider x:Name="slider" />
    </StackLayout>
 </ContentPage>
