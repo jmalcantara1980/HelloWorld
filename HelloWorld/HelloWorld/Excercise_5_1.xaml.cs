@@ -10,21 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace HelloWorld
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GreetPage : ContentPage
+    public partial class Excercise_5_1 : ContentPage
     {
-        public GreetPage()
+        public Excercise_5_1()
         {
             InitializeComponent();
-
-            slider.Value = 0.5;
-
-            //string x = Device.RuntimePlatform;
-
-            
-            
-            
         }
-
-        
     }
 }

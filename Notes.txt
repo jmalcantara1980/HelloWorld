@@ -1,0 +1,110 @@
+-To Change the Launch Page
+Go to App.xaml.cs and in the public App Method change the name of the page
+
+- To detect the current Platform
+Device.RuntimePlatform
+
+- To apply UI settings depending on the Plattform (on code)
+https://forums.xamarin.com/discussion/98989/device-onplatform-t-t-t-is-obsolete-use-switch-runtimeplatform-instead
+
+- To apply UI settings depending on the Plattform (on xaml)
+https://channel9.msdn.com/Shows/XamarinShow/XamarinForms-101-OnPlatform-Adjusting-UI-Based-on-Operation-System
+
+ContentPage
+- Supports Padding
+- There can be only one content element ie a Layout
+
+StackLayout (Position elements in a single line)
+- By default fill its container
+- VerticalOptions="fill" (Default)
+- Spacing (Space Between the elements)
+- Padding Left, Top, Right, Bottom (Space Between the layout and its elements)
+- Orientation
+
+Grid (Position elements in rows an columns)
+- By default fill its container
+- Rowspacing
+- ColumnSpacing
+- You set the Grid.Row, Grid.Column Grid.ColumnSpan, Grid.RowSpan in the child elements (attached bindable properties)
+- To set the definitions of the rows, you use the tags <Grid.RowDefinitions>
+
+<Grid.RowDefinitions>
+<RowDefinition Height="100" />
+<RowDefinition Height="2*" />
+<RowDefinition Height="*" />
+</Grid.RowDefinitions>
+
+First row height is 100 units
+Seccond row is twice taller as the third row
+
+(SAME WITH ColmunDefinition)
+
+if you set the width of a column to Auto, it will adjust it's width to the width of the control
+
+
+Absolute Layout
+- AbsoluteLayout.LayoutBounds X,Y,WIDTH,HEIGHT can be absolute or proportional values
+- To define proportional values you use AbsoluteLayout.LayoutFlags
+0 - 1, 1 = 100%
+* None (Default)
+* All
+* WidthProportional
+* HeightProportional
+* XProportional
+* YProportional
+* PositionProportional
+* SizeProportional
+You can overlay elements
+
+
+Relative Layout
+- Position of an element here is relative it's container
+- Attached bindable properties
+* XConstraint
+* YConstraint
+* WidthConstraint
+* HeightConstraint
+* BoundsConstraint
+
+RelativeLayout.WidthConstraint
+RelativeLayout.HeightConstraint
+
+Followed by a ConstraintExpression that can be:
+
+RelativeToParent or RelativeToView
+
+Then Property: Height or Width
+
+Factor 1 (Number) 
+
+Constant [Optional] (Initial Value)
+
+
+Images (Can be platform independient o platform specific)
+Platform independient:
+Uri / Embed in Portable Class Library PCL
+Chache of the image is by default one hour, you can disable or set cache time
+
+Image can have diferent aspects: AspectFill, AspectFit, Fill
+
+To use an embeded image, add the image to the proyect and set it's build action to embedded resource
+
+http://icons8.com
+
+
+Change App Icon on iOS Proyect
+In Assets Catalog, double click Assets
+
+Change App Icon on Android Proyect
+Right Click the proyect, select properties, in the properties window select Android Manifest
+
+Image Circle Plugin
+In the solution right click the main proyect, select Manage Nuget Packages
+In the search box Type Xam.Plugins.Forms.ImageCircle and install
+for the iOS Proyect go to AppDelegate and after the global::Xamarin.Forms.Forms.Init()
+write ImageCircleRenderer.Init()
+On Android, do the same on Main Activity, you may have to add the using reference before to make the method visible
+
+
+Dealing with sizes
+160 Units = 1 inch

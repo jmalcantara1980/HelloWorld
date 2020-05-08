@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HelloWorld.Excercise_4_2"
+             >
+    <AbsoluteLayout>
+        
+            <Image Aspect="AspectFill" Source="http://lorempixel.com/1920/1080/nature/7/"  
+                   AbsoluteLayout.LayoutBounds="0,0,1,1"
+             AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"/>
+
+        <Label Text="Relax" 
+               TextColor="White" 
+               FontSize="30" 
+               HorizontalOptions="Center"
+			   AbsoluteLayout.LayoutBounds="0, 20, 1, 50" 
+               AbsoluteLayout.LayoutFlags="WidthProportional" />
+
+
+        <BoxView
+            BackgroundColor="Black"
+            IsVisible="True"
+            AbsoluteLayout.LayoutBounds="0, 1, 1, 100"
+            AbsoluteLayout.LayoutFlags="WidthProportional, XProportional, YProportional"
+            Opacity="0.5"
+            />
+
+
+        <StackLayout Padding="30,0"
+                     Orientation="Horizontal"
+                     AbsoluteLayout.LayoutBounds="0,1,1,100"
+                     AbsoluteLayout.LayoutFlags="WidthProportional, XProportional, YProportional">
+
+            <Label TextColor="white"
+                   Text="Profile"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            <Label TextColor="White" 
+                   Text="Medidate"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+            <Label TextColor="White" 
+                   Text="Themes"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+
+        </StackLayout>
+                     
+                     
+    </AbsoluteLayout>    
+</ContentPage>

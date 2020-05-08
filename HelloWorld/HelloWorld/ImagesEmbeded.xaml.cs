@@ -10,21 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace HelloWorld
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class GreetPage : ContentPage
+    public partial class ImagesEmbeded : ContentPage
     {
-        public GreetPage()
+        public ImagesEmbeded()
         {
             InitializeComponent();
 
-            slider.Value = 0.5;
-
-            //string x = Device.RuntimePlatform;
-
-            
-            
-            
+            image.Source = ImageSource.FromResource("HelloWorld.Images.background.jpg");
         }
-
-        
     }
 }

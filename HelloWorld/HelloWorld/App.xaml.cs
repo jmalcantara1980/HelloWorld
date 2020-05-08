@@ -10,7 +10,7 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-            MainPage = new GreetPage();
+            MainPage = new Populating_A_Basic_List();
         }
 
         protected override void OnStart()

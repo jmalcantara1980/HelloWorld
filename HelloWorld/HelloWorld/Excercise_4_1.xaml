@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HelloWorld.Excercise_4_1"
+             >
+    <AbsoluteLayout>
+        
+        <BoxView 
+            BackgroundColor="#f7f7f7"
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+            AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+            />
+
+        <StackLayout 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+                     AbsoluteLayout.LayoutFlags="All"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     >
+
+            <Label Text="$11.95"
+                   TextColor="#33353a"
+                   FontSize="60"
+                   FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   />
+
+            <Button Text="Add $7.99 Credit"
+                    BackgroundColor="#1695A3"
+                    BorderRadius="15"
+                    HeightRequest="40"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    />
+
+            
+        
+        </StackLayout>
+
+        <StackLayout
+            BackgroundColor="Green"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            AbsoluteLayout.LayoutBounds="0,0.5,1,0.3"
+            AbsoluteLayout.LayoutFlags="All"
+            Padding="40, 0" Spacing="20"
+            >
+            <Label Text="Why pay for credit"
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   />
+            <Label FontSize="13" HorizontalTextAlignment="Center">
+             Because you can reach more people who aren't on
+SkyApp by calling mobile and landline
+numbers, or spending SMS, at low-cost rates.
+            </Label>
+        </StackLayout>
+
+        
+
+    </AbsoluteLayout>   
+</ContentPage>
