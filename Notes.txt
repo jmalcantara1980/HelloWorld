@@ -108,3 +108,10 @@ On Android, do the same on Main Activity, you may have to add the using referenc
 
 Dealing with sizes
 160 Units = 1 inch
+
+
+Lists 
+Investigate DataTemplates
+
+
+Investigate Masterdetailpage

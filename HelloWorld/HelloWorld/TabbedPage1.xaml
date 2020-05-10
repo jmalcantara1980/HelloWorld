@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:HelloWorld"
+             mc:Ignorable="d"
+             x:Class="HelloWorld.TabbedPage1">
+    <local:ContactsPage Title="Contacts" IconImageSource="clock"/>
+
+    <NavigationPage Title="Page1" IconImageSource="clock">
+        <x:Arguments>
+            <ContentPage >
+                <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+       
+    <ContentPage Title="Page2" IconImageSource="clock">
+        <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center"/>
+    </ContentPage>
+</TabbedPage>

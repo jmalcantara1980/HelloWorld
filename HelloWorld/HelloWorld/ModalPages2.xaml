@@ -4,12 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HelloWorld.Populating_A_Basic_List">
-    <ListView x:Name="listView">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ImageCell Text="{Binding Name}" Detail="{Binding Status}"  ImageSource="{Binding ImageUrl}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+             x:Class="HelloWorld.ModalPages2">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="This is how the app works."/>
+            <Button Text="Back" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
